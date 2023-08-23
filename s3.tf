@@ -1,11 +1,11 @@
-resource "aws_s3_bucket" "onebucket" {
-   bucket = "testing-s3-with-terraform"
+resource "aws_s3_bucket" "mybucket" {
+   bucket = "testi_bucket"
    acl = "private"
    versioning {
       enabled = true
    }
    tags = {
-     Name = "Bucket1"
+     Name = "Buckettest"
      
    }
 }
