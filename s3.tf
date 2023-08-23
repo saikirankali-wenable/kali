@@ -1,11 +1,11 @@
 resource "aws_s3_bucket" "mybucket" {
-   bucket = "testi_bucket"
+   bucket = "test_bucket"
    acl = "private"
    versioning {
       enabled = true
    }
    tags = {
-     Name = "Buckettest"
+     Name = "Bucket_test"
      
    }
 }
