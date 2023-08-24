@@ -5,10 +5,10 @@ provider "aws" {
 
 
 resource "aws_instance" "ubuntu_priv" {
-  ami = "ami-0989fb15ce71ba39e (64-bit (x86))"
+  ami = "ami-0989fb15ce71ba39e"
   instance_type = "t2.micro"
   key_name = "devops"
-  subnet_id = "aws_subnet.u_priv.id"
+  subnet_id = aws_subnet.private_subnet.id
   vpc_security_group_ids = [aws_security_group.u_sg.id]
   tags = {
     name = "task"
