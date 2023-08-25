@@ -5,7 +5,7 @@ provider "aws" {
 
 
 resource "aws_instance" "ubuntu_priv" {
-  ami = "ami-0989fb15ce71ba39e"
+  ami = var.ami
   instance_type = "t2.micro"
   key_name = "devops"
   subnet_id = aws_subnet.private_subnet.id
